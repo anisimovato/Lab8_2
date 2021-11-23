@@ -24,15 +24,30 @@ namespace Lab8_2
                 {
                     File.Create(path);
                 }
-                using (StreamWriter sw = new StreamWriter(path))
+                StreamWriter sw = new StreamWriter(path);
+                foreach (int item in array)
                 {
-                    sw.WriteLine("array[]", array);
+                    sw.WriteLine(item);
+                    sw.Write("");
                 }
+                sw.Close();
                 
 
             }
-        }
 
+            StreamReader sr = new StreamReader("Tanya.txt");
+            string numbers = sr.ReadLine();
+            foreach (var number in numbers.Split())
+            {
+                Console.WriteLine(number);
+            }
+
+
+
+            Console.ReadKey();
+        }
     }
 
 }
+
+
