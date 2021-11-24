@@ -31,7 +31,7 @@ namespace Lab8_2
                     sw.Write("");
                 }
                 sw.Close();
-                
+
 
             }
 
@@ -42,12 +42,20 @@ namespace Lab8_2
                 Console.WriteLine(number);
             }
 
+            char[] newarrey = numbers.ToArray();
+            int Sum = 0;
+            for (int j = 0; j < newarrey.Length; j++)
+            {
 
+                Sum += newarrey[j];
+            }
+
+
+            Console.WriteLine("Сумма=" + Sum);
 
             Console.ReadKey();
         }
     }
 
 }
-
 
